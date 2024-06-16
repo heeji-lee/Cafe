@@ -1,0 +1,50 @@
+/* 초기화 */
+*{ margin: 0; padding: 0;}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+li{ list-style: none;}
+
+body{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav > .logo{
+    position: absolute;
+    z-index: 10;
+    font-size: 1.5em;
+}
+
+#gnb{
+    position: absolute; /* 절대좌표로 상향 배치 */
+    width: 100%; /* 폭 콘텐츠에 맞게 자동조절 */
+    border: 1px solid;
+    overflow: hidden;
+    background: #BBADA4;
+    padding-left: 40%;
+}
+
+/* 메뉴 수평 배치 및 크기 지정 */
+#gnb > ul > li{
+    float: left;
+    width: 100px; height: 150px;
+    padding: 20px;
+}
+#gnb > ul > li:hover{
+    background: #8D776A;
+}
+
+/* 2단계 메뉴 */
+ul.depth2{
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+ul.depth2 > li:hover > a{
+    color: white;
+    text-decoration: underline;
+}

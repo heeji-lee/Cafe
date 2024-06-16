@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cafe</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">
+            <img src="logo.png" alt="Cafe Logo">
+        </a>
+        <div id="gnb">
+            <ul>
+                <li class="depth1">
+                    <a class="dp1" href="/menu">
+                        <span class="ko">메뉴</span>
+                    </a>
+                    <ul class="depth2">
+                        <li><a href="#">커피</a></li>
+                        <li><a href="#">에이드</a></li>
+                        <li><a href="#">티</a></li>
+                    </ul>
+                </li>
+                <li class="depth1">
+                    <a class="dp1" href="/store">
+                        <span class="ko">매장 찾기</span>
+                    </a>
+                <li class="depth1">
+                    <a class="dp1" href="#">
+                        <span class="ko">커뮤니티</span>
+                    </a>
+                    <ul class="depth2">
+                        <li><a href="/notice">공지사항</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div layout:fragment="content">
+        <p> 블록1 , content 영역</p>
+    </div>
+
+    <script th:src="@{/js/scripts.js}"></script>
+    <th:block layout:fragment="javascript">
+
+    </th:block>
+
+    <div class="row footer">
+        <div class="row fixed-bottom" style="z-index: -100">
+            <footer class="py-1 my-1">
+                <p class="text-center text-muted">Footer</p>
+            </footer>
+        </div>
+    </div>
+
+    <!--jQuery 추가-->
+
+</body>
+</html>
