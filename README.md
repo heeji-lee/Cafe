@@ -57,7 +57,7 @@
 >## ERD 구조
 >📌[ERD Cloud에서 직접 보기](https://www.erdcloud.com/d/ZXXWMfPSA8GJccibG)
 >
->![image](https://github.com/heeji-lee/Cafe/assets/73567158/f6682e65-3c6a-4190-910f-aacb2687d8ab)</br>
+>![image](https://github.com/heeji-lee/Cafe/assets/73567158/b9a840b7-3af8-4b0a-bfc1-41bba1ea62e8)</br>
 
 ># 주요 기능
 >## 요약
