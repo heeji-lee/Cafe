@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+</head>
+<body>
+<form method="post" action="/user/join">
+    <label for="user_id">아이디</label>
+    <input type="text" id="user_id" name="user_id" required>
+
+    <label for="password">비밀번호</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="gender">성별</label>
+    <select id="gender" name="gender" required>
+        <option value="male">남성</option>
+        <option value="female">여성</option>
+    </select>
+
+    <label for="phone">전화번호</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="birthday">생일</label>
+    <input type="date" id="birthday" name="birthday" required>
+
+    <button type="submit">회원가입</button>
+    <button type="reset">취소</button>
+</form>
+</body>
+</html>
+<!--//-->
