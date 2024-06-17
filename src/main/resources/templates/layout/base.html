@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cafe</title>
     <link th:href="@{/css/style.css}" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <nav>
-        <a href="/" class="logo">
-            <img src="logo.png" alt="Cafe Logo">
-        </a>
         <div id="gnb">
-            <ul>
+            <a href="/" class="logo">
+                <img src="/images/logo.png" alt="Cafe Logo" style="width: 80px; height: 80px;">
+            </a>
+            <ul class="main-menu">
                 <li class="depth1">
                     <a class="dp1" href="/menu">
                         <span class="ko">메뉴</span>
@@ -29,6 +30,7 @@
                     <a class="dp1" href="/store">
                         <span class="ko">매장 찾기</span>
                     </a>
+                </li>
                 <li class="depth1">
                     <a class="dp1" href="#">
                         <span class="ko">커뮤니티</span>
@@ -36,6 +38,18 @@
                     <ul class="depth2">
                         <li><a href="/notice">공지사항</a></li>
                     </ul>
+                </li>
+            </ul>
+            <ul class="user-menu">
+                <li>
+                    <a href="/login">
+                        <span>로그인</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/join">
+                        <span>회원가입</span>
+                    </a>
                 </li>
             </ul>
         </div>
