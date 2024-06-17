@@ -1,5 +1,5 @@
 $(function(){
-    var gnb_height = '80px';  // 1단계 메뉴 높이
+    var gnb_height = '70px';  // 1단계 메뉴 높이
     var gnb_dp2_height = '180px'; // 2단계 메뉴 높이
     var $gnb = $('#gnb');
 
