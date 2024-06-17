@@ -12,42 +12,43 @@
 <body>
     <nav>
         <div id="gnb">
-            <a href="/" class="logo">
-                <img src="/images/logo.png" alt="Cafe Logo" style="width: 80px; height: 80px;">
+            <a th:href="@{/}" class="logo">
+                <img th:src="@{/images/logo.png}" alt="Cafe Logo" style="width: 100px; height: 100px;">
             </a>
             <ul class="main-menu">
                 <li class="depth1">
-                    <a class="dp1" href="/menu">
+                    <a class="dp1" th:href="@{/menu}">
                         <span class="ko">메뉴</span>
                     </a>
                     <ul class="depth2">
-                        <li><a href="#">커피</a></li>
-                        <li><a href="#">에이드</a></li>
-                        <li><a href="#">티</a></li>
+                        <li><a th:href="@{/}">커피</a></li>
+                        <li><a th:href="@{/}">에이드</a></li>
+                        <li><a th:href="@{/}">티</a></li>
                     </ul>
                 </li>
                 <li class="depth1">
-                    <a class="dp1" href="/store">
+                    <a class="dp1" th:href="@{/store}">
                         <span class="ko">매장 찾기</span>
                     </a>
                 </li>
                 <li class="depth1">
-                    <a class="dp1" href="#">
+                    <a class="dp1" th:href="@{/}">
                         <span class="ko">커뮤니티</span>
                     </a>
                     <ul class="depth2">
-                        <li><a href="/notice">공지사항</a></li>
+                        <li><a th:href="@{/notice}">공지사항</a></li>
                     </ul>
                 </li>
             </ul>
             <ul class="user-menu">
                 <li>
-                    <a href="/login">
+                    <a th:href="@{/login}">
                         <span>로그인</span>
                     </a>
                 </li>
+                <li><span>|</span></li>
                 <li>
-                    <a href="/join">
+                    <a th:href="@{/join}">
                         <span>회원가입</span>
                     </a>
                 </li>

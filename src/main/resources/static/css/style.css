@@ -8,41 +8,55 @@ a{
 
 li{ list-style: none;}
 
-body{
-    font-size: 20px;
-    font-weight: bold;
-}
-
 #gnb{
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #ccc;
     overflow: hidden;
-    background: white;
+    background: #F8F4E1;
     padding: 0px 40px; /* 상하좌우 패딩 조절 */
 }
 
-.main-menu, .user-menu {
+.main-menu{
     display: flex;
 }
 
-/* 메뉴 수평 배치 및 크기 지정 */
-#gnb > ul > li{
-    width: 100px; height: 150px;
+#gnb > ul.main-menu > li{
+    width: 100px;
     padding: 20px;
+    padding-top: 35px;
 }
 
 .main-menu > li:hover {
-    background: #BBADA4;
+    background: #AF8F6F;
 }
 
-/* 2단계 메뉴 */
+ul.depth1{
+    font-size: 15px;
+    margin-top: 40px;
+}
+
+a.dp1{
+    font-size: 20px;
+    font-weight: bold;
+}
+
 ul.depth2{
     font-size: 15px;
     margin-top: 40px;
 }
 
+ul.depth2 > li {
+    padding: 5px 0;
+}
+
 ul.depth2 > li:hover > a{
     color: white;
     text-decoration: underline;
+}
+
+.user-menu{
+    display: flex;
+    margin: 36px;
+    gap: 15px; /* 간격 조절 */
 }

@@ -1,6 +1,6 @@
 $(function(){
-    var gnb_height = '70px';  // 1단계 메뉴 높이
-    var gnb_dp2_height = '180px'; // 2단계 메뉴 높이
+    var gnb_height = '100px';  // 1단계 메뉴 높이
+    var gnb_dp2_height = '200px'; // 2단계 메뉴 높이
     var $gnb = $('#gnb');
 
     // gnb 초기화(2단계 메뉴 숨기기)
