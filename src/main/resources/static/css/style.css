@@ -9,17 +9,18 @@ a{
 li{ list-style: none;}
 
 #gnb{
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #ccc;
     overflow: hidden;
     background: #F8F4E1;
-    padding: 0px 40px; /* 상하좌우 패딩 조절 */
 }
 
 .main-menu{
     display: flex;
-    margin-left: 80px;
+    margin-left: 150px;
 }
 
 #gnb > ul.main-menu > li{
@@ -63,7 +64,11 @@ ul.depth2 > li:hover > a{
 }
 
 footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: #ccc;
+    text-align: center;
     padding: 60px 0;
 }
 

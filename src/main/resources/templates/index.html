@@ -5,8 +5,14 @@
       layout:decorate="~{layout/base.html}"
 >
 <body>
-    메인화면
+<div layout:fragment="content">
+    <div>
+        <a th:href="@{/menu}">
+            <img src="https://image.istarbucks.co.kr/upload/banner/yJpqZT_20240514090240303.jpg" style="width: 100%">
+        </a>
+    </div>
 
     <script layout:fragment="javascript" th:inline="javascript"></script>
+</div>
 </body>
 </html>

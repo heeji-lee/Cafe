@@ -13,7 +13,7 @@
     <nav>
         <div id="gnb">
             <a th:href="@{/}" class="logo">
-                <img th:src="@{/images/logo.png}" alt="Cafe Logo" style="width: 100px; height: 100px;">
+                <img th:src="@{/images/logo.png}" alt="Cafe Logo" style="width: 100px; height: 100px; padding-left: 80px">
             </a>
             <ul class="main-menu">
                 <li class="depth1">
@@ -48,7 +48,7 @@
                 </li>
                 <li><span>|</span></li>
                 <li>
-                    <a th:href="@{/join}">
+                    <a th:href="@{/join}" style="padding-right: 80px">
                         <span>회원가입</span>
                     </a>
                 </li>
@@ -57,7 +57,7 @@
     </nav>
 
     <div layout:fragment="content">
-        <p> 블록1 , content 영역</p>
+        <p>content 영역</p>
     </div>
 
     <script th:src="@{/js/scripts.js}"></script>
