@@ -15,19 +15,19 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class NoticeDTO {
 
-    private Long no_cd;
+    private Long cd;
 
     @NotEmpty
     @Size(min = 3, max = 100)
-    private String no_title;
+    private String title;
 
     @NotEmpty
-    private String no_content;
+    private String content;
 
     @NotEmpty
-    private String no_writer;
+    private String writer;
 
-    private LocalDateTime no_regDate;
-//    private LocalDateTime modDate;
+    private LocalDateTime regDate;
+    private LocalDateTime modDate;
 
 }

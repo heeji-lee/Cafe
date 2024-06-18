@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Notice Detail</title>
+</head>
+<body>
+<h2>Notice Detail</h2>
+
+<!-- 공지사항 상세 정보 -->
+<div>
+    <p><strong>Title:</strong> <span th:text="${noticeDTO.title}"></span></p>
+    <p><strong>Content:</strong> <span th:text="${noticeDTO.content}"></span></p>
+    <p><strong>Writer:</strong> <span th:text="${noticeDTO.writer}"></span></p>
+    <p><strong>Created Date:</strong> <span th:text="${#dates.format(noticeDTO.date_created, 'yyyy-MM-dd HH:mm')}"></span></p>
+    <p><strong>Updated Date:</strong> <span th:text="${#dates.format(noticeDTO.date_updated, 'yyyy-MM-dd HH:mm')}"></span></p>
+</div>
+
+<!-- 댓글 목록 부분은 삭제 -->
+
+</body>
+</html>
