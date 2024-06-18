@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Notice List</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/list.css">
+</head>
+<body>
+
+<!-- 헤더 포함 -->
+<header>
+    <div class="header-logo">
+        <!-- <img src="/path/to/logo.png" alt="Logo"> -->
+    </div>
+    <nav>
+        <div class="menu-item">
+            <span>Menu</span>
+            <div class="submenu">
+                <a href="#">Submenu 1</a>
+                <a href="#">Submenu 2</a>
+                <a href="#">Submenu 3</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <span>Store Locator</span>
+            <div class="submenu">
+                <a href="#">Submenu 1</a>
+                <a href="#">Submenu 2</a>
+                <a href="#">Submenu 3</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <span>Community</span>
+            <div class="submenu">
+                <a href="#">Submenu 1</a>
+                <a href="#">Submenu 2</a>
+                <a href="#">Submenu 3</a>
+            </div>
+        </div>
+    </nav>
+    <div class="auth-buttons">
+        <button onclick="location.href='/login'">Login</button>
+        <button onclick="location.href='/signup'">Sign Up</button>
+    </div>
+</header>
+
+<!-- 컨텐츠 -->
+<div class="content">
+    <h2>Notice List</h2>
+
+    <!-- 공지사항 목록 -->
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+        <tr>
+            <th>No.</th>
+            <th>Title</th>
+            <th>Writer</th>
+            <th>Created Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- 반복문을 이용해 각 공지사항을 테이블에 출력 -->
+        <tr th:each="noticeDTO : ${responseDTO.dtoList}">
+            <td th:text="${noticeDTO.cd}"></td>
+            <td><a th:href="@{/cafe/notice/read(cd=${noticeDTO.cd})}" th:text="${noticeDTO.title}">Read</a></td>
+            <td th:text="${noticeDTO.writer}"></td>
+            <td th:text="yyyy"></td>
+            <!-- <td th:text="${#dates.format(noticeDTO.date_created, 'yyyy-MM-dd HH:mm')}"></td> -->
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- 페이지네이션 -->
+    <div th:if="${responseDTO.total > 0}">
+        <!--        <p>Page: <span th:text="${responseDTO.page}"></span></p>-->
+        <!--        <p>Total Pages: <span th:text="${responseDTO.end}"></span></p>-->
+        <!--        <p>Total Items: <span th:text="${responseDTO.total}"></span></p>-->
+        <nav>
+            <ul class="pagination justify-content-center">
+                <!-- 이전 페이지 링크 -->
+                <li class="page-item" th:classappend="${responseDTO.prev} ? '' : 'disabled'">
+                    <a class="page-link" th:href="@{/cafe/notice/list(page=${responseDTO.page - 1})}">Previous</a>
+                </li>
+
+                <!-- 페이지 번호 링크 -->
+                <li th:each="pageNum : ${#numbers.sequence(responseDTO.start, responseDTO.end)}" class="page-item">
+                    <a class="page-link" th:href="@{/cafe/notice/list(page=${pageNum})}" th:text="${pageNum}"></a>
+                </li>
+
+                <!-- 다음 페이지 링크 -->
+                <li class="page-item" th:if="${responseDTO.next}">
+                    <a class="page-link" th:href="@{/cafe/notice/list(page=${responseDTO.page + 1})}">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<!-- 푸터 포함 -->
+<div class="footer">
+    <div class="footer-logo">
+        <!-- <img src="/path/to/logo.png" alt="Logo"> -->
+    </div>
+    <div class="footer-info">
+        <p>Email: info@cafe.com</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Address: 123 Coffee Street, Coffee City, CA 12345</p>
+    </div>
+</div>
+
+</body>
+</html>
