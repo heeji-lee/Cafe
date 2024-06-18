@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Base Layout</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<!-- 헤더 포함 -->
+<th:block th:replace="header :: header"></th:block>
+
+<div class="content">
+    <!-- 컨텐츠는 여기서 정의 -->
+    <th:block th:replace="~{::body}"></th:block>
+</div>
+
+<!-- 푸터 포함 -->
+<th:block th:replace="footer :: footer"></th:block>
+</body>
+</html>
